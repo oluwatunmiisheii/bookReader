@@ -125,7 +125,7 @@ page banner styling ends here
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 300px;
+    max-height: 700px;
     height: 100%;
     transition: max-height 1.7s;
     overflow-y: scroll;
