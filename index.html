@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<link href="assets/css/lib/fontAwesome/css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <title>Book reader</title>
+  </head>
+  <body>
+  	<div id="wrapper">
+	    <header>
+	    	<div id="page-banner">
+	    		<h1 class="title"> Book Reader</h1>
+          		<p>Knowledge is power</p>
+				<form id="search-books">
+					<input type="text" placeholder="Search books..." />
+				</form>
+	    	</div>
+	    </header>
+	    <div id="book-list">
+			<div class="hero">
+				<span class="title">Books to Read</span>
+				<a id="hide-books">Hide books</a>
+				<div class="alert"><p></p></div>
+			</div>
+	    	<ul>
+	    		<li>
+					<div>
+						<span class="name">Name of the Wind</span>
+						<span class="far fa-trash-alt delete"></span>
+						<span class="info-btn fas fa-info"></span>
+						<span class="info">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, ducimus. Necessitatibus praesentium, qui error
+							corrupti sequi adipisci! Ducimus accusantium alias libero ipsa rem accusamus ut? Amet tempore explicabo aut pariatur.
+						</span>
+					</div>
+				</li>
+					
+	    		<li>
+					<div>
+						<span class="name">The Wise Man's Fear</span>
+						<span class="far fa-trash-alt delete"></span>
+						<span class="info-btn fas fa-info"></span>
+						<span class="info">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, ducimus. Necessitatibus praesentium, qui error
+							corrupti sequi adipisci! Ducimus accusantium alias libero ipsa rem accusamus ut? Amet tempore explicabo aut pariatur.
+						</span>
+					</div>
+				</li>
+					
+	    		<li>
+					<div>
+						<span class="name">Kafka on the Shore</span>
+						<span class="far fa-trash-alt delete"></span>
+						<span class="info-btn fas fa-info"></span>
+						<span class="info">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, ducimus. Necessitatibus praesentium, qui error
+							corrupti sequi adipisci! Ducimus accusantium alias libero ipsa rem accusamus ut? Amet tempore explicabo aut pariatur.
+						</span>
+					</div>
+				</li>
+					
+	    		<li>
+					<div>
+						<span class="name">The Master and the Margarita</span>
+						<span class="far fa-trash-alt delete"></span>
+						<span class="info-btn fas fa-info"></span>
+						<span class="info">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, ducimus. Necessitatibus praesentium, qui error
+							corrupti sequi adipisci! Ducimus accusantium alias libero ipsa rem accusamus ut? Amet tempore explicabo aut pariatur.
+						</span>
+					</div>
+				</li>
+				
+				<li>
+					<div>
+						<span class="name">God's Generals</span>
+						<span class="far fa-trash-alt delete"></span>
+						<span class="info-btn fas fa-info"></span>
+						<span class="info">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, ducimus. Necessitatibus praesentium, qui error
+							corrupti sequi adipisci! Ducimus accusantium alias libero ipsa rem accusamus ut? Amet tempore explicabo aut pariatur.
+						</span>
+					</div>
+	    		</li>
+
+	    	</ul>
+		</div>
+
+		<div class="book-add">
+			<button id="myBtn"><i class="fa fa-plus"></i></button>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<form id ="add-book">
+						<input type="text" placeholder="Enter Book Title..." required/>
+						<textarea placeholder="Enter Book Description..." required></textarea>
+						<button>Submit</button>
+					</form>
+				</div>
+			</div>	
+		</div>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
