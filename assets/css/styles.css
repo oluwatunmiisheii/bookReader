@@ -125,7 +125,7 @@ page banner styling ends here
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 300px;
+    max-height: 700px;
     height: 100%;
     transition: max-height 1.7s;
     overflow-y: scroll;
@@ -378,15 +378,12 @@ animation fade out ends here
 responsive design
 =========================*/
 @media (max-width: 980px){
-    ::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
     body {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     }
     #wrapper {
         width: 100%;
