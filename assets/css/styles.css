@@ -1,0 +1,403 @@
+/*=========================== 
+general styling starts here
+=======================-===*/
+body{
+    font-family: Tahoma;
+    color: #444;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(../img/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: rgb(0, 128, 128);
+  }
+
+h1, h2{
+    font-weight: normal;
+}
+
+#wrapper{
+    width: 90%;
+    max-width: 550px;
+    margin: 10px auto;
+    border-radius: 6px;
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 500ms linear;
+    background: #fff;
+}
+/*==============================
+ general styling ends here 
+ ===============================*/
+
+
+/*===============================
+ page banner styliong starts here 
+ ===============================*/
+#page-banner{
+    padding: 10px 0;
+    text-align: center;
+    background: teal;
+}
+
+#page-banner h1, #page-banner p{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
+}
+
+#page-banner input{
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+    outline: none;
+}
+/*============================
+page banner styling ends here 
+=============================*/
+
+/*=============================
+ book list styling starts here 
+ ==============================*/
+#book-list .hero{
+    margin: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.alert p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.success{
+    color:green;
+}
+
+.bookDeleted{
+    color: red;
+}
+
+#book-list .title{
+    font-size: 30px;
+}
+
+#book-list #hide-books{
+    float: right;
+    padding: 10px;
+    border: 1px solid teal;
+    outline: none;
+    color: #fff;
+    background: teal;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
+    transition: all ease-in-out .5s;
+}
+
+#book-list #hide-books:hover {
+   border: 1px solid rgb(233, 217, 124);
+   background: rgb(233, 217, 124);
+}
+
+#book-list ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    height: 100%;
+    transition: max-height 1.7s;
+    overflow-y: scroll;
+    background: #fff;
+}
+
+ul li div span.name {
+    cursor: pointer;
+}
+
+#book-list ul li{
+    padding: 20px 0;
+    transition: all ease-in-out .3s;
+    border: 5px solid #fff;
+    background: #f8f8fa;
+    margin: 0 5px;
+}
+
+#book-list ul li:hover {
+   background: rgba(233, 217, 124, .4);
+}
+
+#book-list li:nth-child(2n){
+    background: #e5e6eb;
+}
+
+#book-list li div{
+    padding: 20px;
+    border-left: 5px solid #008080;
+    margin: 0 30px;
+}
+
+#book-list li:nth-child(2n) div{
+    border-left: 5px solid #ffff00;
+}
+
+#book-list li:nth-child(3n) div {
+    border-left: 5px solid #ff0000d0;
+}
+
+/*==================================================================
+ delete button, info button and complete button styling starts here 
+ ==================================================================*/
+.delete, .info-btn{
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    color: teal;
+    transition: all ease-in-out .5s;
+    font-size: 15px;
+}
+
+.info-btn{
+    margin-right: 25px;
+}
+
+.delete:hover,
+.info-btn:hover{
+   color: rgba(0, 127, 127, .5);
+}
+/*=================================
+delete button styling ends here 
+=================================*/
+
+
+/*========================== 
+info styling starts here 
+==========================*/
+.info {
+    display: none;
+    line-height: 2;
+    padding: 20px 50px 0 15px;
+    font-size: 13px;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .2;
+    transition: all ease-in-out .5s;
+}
+
+.show {
+    display: block;
+}
+/*==========================
+ info styling ends here
+===========================*/
+
+/*=============================
+add book styling starts here
+==============================*/
+.book-add {
+    width: 100%;
+    text-align: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin: auto;
+    left:  0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 100%;
+}
+.close {
+    font-size: 35px;
+    cursor: pointer;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+
+#add-book {
+    width: 100%;
+}
+
+#myBtn,
+#add-book button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease-in-out .7s;
+    background: rgb(0, 127, 127);
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 200px;
+}
+
+#myBtn{
+    margin: 30px 65px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid teal;
+    border-radius: 40px;
+    text-align: center;
+    float: right;
+}
+
+#add-book button:hover {
+    background: transparent;
+    border: 1px solid teal;
+    color: teal;
+}
+
+#myBtn:hover{
+    border: 1px solid rgb(233, 217, 124);
+    background: rgb(233, 217, 124);
+}
+
+
+#add-book input, #add-book textarea{
+    margin: 30px auto;
+    display: block;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 400px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+#add-book textarea{
+    height: 200px;
+} 
+
+#add-book input:focus, #add-book textarea:focus {
+    outline: 2px solid teal;
+}
+
+.see {
+    display: block;
+}
+/*=============================
+add book styling ends here
+===============================*/
+
+
+/* =============================
+animation fade out starts here
+===============================*/
+@-webkit-keyframes fade-out {
+    from {
+        opacity: 1; 
+    } 
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    } 
+    to { 
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fade-out 1s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 1;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+/*=============================
+animation fade out ends here
+===============================*/
+
+/*========================
+responsive design
+=========================*/
+@media (max-width: 980px){
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #wrapper {
+        width: 100%;
+        max-width: 900px;
+        margin:auto;
+    }
+    #book-list ul {
+        max-height: 700px;
+        height: 100%;
+    }
+
+    #add-book input,
+    #add-book textarea {
+        width: 100%;
+        max-width: 700px;
+    }
+}
